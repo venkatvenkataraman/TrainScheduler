@@ -77,7 +77,7 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   var currentTimeInX = moment().format("X");
   var trainTimeFirstInX = parseInt(trainTimeFirst);
   console.log(currentTimeInX, trainTimeFirstInX);
-  console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+  console.log("CURRENT TIME: " + moment(currentTime).format("HH:mm"));
   var numberOfNextTrain = Math.ceil((currentTimeInX - trainTimeFirstInX)/(trainFrequency*60));
   var trainNextArrivalCompInX = (trainTimeFirstInX + (numberOfNextTrain*trainFrequency*60));
         // moment().diff(moment.unix(empStart, "X"), "months");
@@ -95,8 +95,8 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
 });
 
 window.onload=function () {
-  console.log("In window.onload:  ", moment().format("hh:mm") );
-  $("#currentTimeDisplay").html("Current Time is: " + moment().format("hh:mm") + "");
+  console.log("In window.onload:  ", moment().format("HH:mm") );
+  $("#currentTimeDisplay").html("Current Time is: " + moment().format("HH:mm") + "");
 };
 
 var time = new Date().getTime();
