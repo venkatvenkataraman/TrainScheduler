@@ -1,0 +1,15 @@
+
+.jumbotron{
+  margin: 0px;
+}
+
+#currentTimeDisplay{
+  text-align: center;
+  color: #08f108;
+  background-color: #000;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 12px;
+  border-color: #08f108;
+  margin:5px;
+}
